@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NavBar</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- ==========HEADER========== -->
+    <div class="header">
+        <!-- ==========NAVBAR START========== -->
+        <nav>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href=""><i class="fa-solid fa-house"></i>KATAKI</a>
+            </div>
+            <!-- TABS -->
+            <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="" class="user1"><i class="fa-solid fa-user"></i>Sign Up</a></li>
+            </ul>
+            <!-- SIGNUP -->
+            <div class="SignUp">
+                <a href="" class="user"><i class="fa-solid fa-user"></i>Sign Up</a>
+            </div>
+            <!-- TOGGLE -->
+            <div class="toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <!-- ==========NAVBAR END========== -->
+    </div>
+    <!-- ==========HEADER END========== -->
+
+
+    <!-- ==========JQUERY START========== -->
+
+    <!-- JQUERY CDN LINK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- CUSTOM JQUERY -->
+    <script>
+        $(document).ready(function () {
+            $(".toggle").click(function () {
+                $("ul").toggle(300);
+
+                // Hamburger Effect-----------------------------
+                $(".toggle i").toggleClass("fa-bars fa-times");
+            });
+
+            // For Resizing Error---------------------------------
+            $(window).resize(function () {
+                $(window).width() >= 760 ? $("ul").show() : $("ul").hide();
+            }).trigger("resize");
+
+        });
+    </script>
+    <!-- ==========JQUERY========== -->
+</body>
+
+</html>
